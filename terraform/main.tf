@@ -17,7 +17,7 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 
 #Create Resource Group
-resource "azurerm_resource_group" "tamops" {
-  name     = "wga-test-rg"
+resource "azurerm_resource_group" "wgademorg" {
+  name     = "wga-demo-rg"
   location = "eastus2"
 }
