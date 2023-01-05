@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "wga-tfstate-rg"
+    resource_group_name  = "wga-rg"
     storage_account_name = "wgatfstatesa"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
