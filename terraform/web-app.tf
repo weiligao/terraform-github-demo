@@ -29,7 +29,7 @@ resource "azurerm_linux_web_app" "demo" {
 }
 
 resource "azurerm_app_service_source_control" "sourcecontrol" {
-  app_id             = azurerm_linux_web_app.demo.id
-  repo_url           = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
-  branch             = "master"
+  app_id   = azurerm_linux_web_app.demo.id
+  repo_url = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
+  branch   = "master"
 }
