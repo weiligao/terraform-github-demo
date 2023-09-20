@@ -25,11 +25,10 @@ resource "azurerm_linux_web_app" "demo" {
   resource_group_name = azurerm_resource_group.demo.name
   service_plan_id     = azurerm_service_plan.demo.id
 
-  site_config {}
-}
-
-resource "azurerm_app_service_source_control" "sourcecontrol" {
-  app_id   = azurerm_linux_web_app.demo.id
-  repo_url = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
-  branch   = "master"
+  site_config {
+    application_stack {
+      docker_image_name   = "nginx:latest"
+      docker_registry_url = "https://index.docker.io"
+    }
+  }
 }
