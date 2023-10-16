@@ -5,12 +5,14 @@ terraform {
       version = "=3.76.0"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "wga-rg"
-    storage_account_name = "wgatfstatesa"
-    container_name       = "tfstate"
-    key                  = "terraform.tfstate"
-  }
+
+  # # Remote backend
+  # backend "azurerm" {
+  #   resource_group_name  = "wga-rg"       # Change to your own resource group name
+  #   storage_account_name = "wgatfstatesa" # Change to your own storage account name
+  #   container_name       = "tfstate"
+  #   key                  = "terraform.tfstate"
+  # }
 }
 
 provider "azurerm" {
