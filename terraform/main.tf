@@ -17,4 +17,7 @@ terraform {
 
 provider "azurerm" {
   features {}
+
+  # Uncomment line below in case of provider registration issues
+  # skip_provider_registration = true
 }
